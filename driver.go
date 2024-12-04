@@ -8,7 +8,7 @@ package odbc
 import (
 	"database/sql"
 
-	"github.com/alexbrainman/odbc/api"
+	"github.com/liaosnet/odbc/api"
 )
 
 var drv Driver
