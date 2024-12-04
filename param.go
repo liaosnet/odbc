@@ -10,7 +10,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/alexbrainman/odbc/api"
+	"github.com/liaosnet/odbc/api"
 )
 
 type Parameter struct {
@@ -66,9 +66,12 @@ func (p *Parameter) BindValue(h api.SQLHSTMT, idx int, v driver.Value, conn *Con
 		plen = p.StoreStrLen_or_IndPtr(buflen)
 		if !conn.isMSAccessDriver {
 			switch {
-			case size >= 4000:
+			case size >= 32740:
 				sqltype = api.SQL_WLONGVARCHAR
 			case p.isDescribed:
+				if p.Size != 0 {
+				    size = p.Size　
+				}
 				sqltype = p.SQLType
 			case size <= 1:
 				sqltype = api.SQL_WVARCHAR
