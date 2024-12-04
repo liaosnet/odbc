@@ -88,6 +88,7 @@ const (
 	// TODO(lukemauldin): Not defined in sqlext.h. Using windows value, but it is not supported.
 	SQL_SS_XML   = -152
 	SQL_SS_TIME2 = -154
+	SQL_DBT_BIGINT = -114
 
 	SQL_C_CHAR           = C.SQL_C_CHAR
 	SQL_C_LONG           = C.SQL_C_LONG
