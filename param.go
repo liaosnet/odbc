@@ -70,7 +70,7 @@ func (p *Parameter) BindValue(h api.SQLHSTMT, idx int, v driver.Value, conn *Con
 				sqltype = api.SQL_WLONGVARCHAR
 			case p.isDescribed:
 				if p.Size != 0 {
-				    size = p.Size　
+					size = p.Size
 				}
 				sqltype = p.SQLType
 			case size <= 1:
